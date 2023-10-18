@@ -59,6 +59,7 @@ class WatcherHandler(FileSystemEventHandler):
         if event.is_directory or self.should_ignore(event.src_path):
             return
         print(f'File {event.src_path} has been created.')
+        self.ssh_client.rsync(os.path.join(self.local_path, ''), self.remote_path)
 
     def on_deleted(self, event):
         """
