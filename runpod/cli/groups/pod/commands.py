@@ -6,7 +6,7 @@ from prettytable import PrettyTable
 
 from runpod import get_pods, create_pod
 
-from ...utils import ssh_cmd
+from runpod.cli.utils import ssh_cmd
 
 @click.group('pod', help='Manage and interact with pods.')
 def pod_cli():

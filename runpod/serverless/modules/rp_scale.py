@@ -7,8 +7,8 @@ import asyncio
 import typing
 
 from runpod.serverless.modules.rp_logger import RunPodLogger
-from .rp_job import get_job
-from .worker_state import Jobs
+from runpod.serverless.modules.rp_job import get_job
+from runpod.serverless.modules.worker_state import Jobs
 
 log = RunPodLogger()
 job_list = Jobs()

@@ -4,7 +4,7 @@ Commands for the config command group
 import sys
 import click
 
-from .functions import set_credentials, check_credentials
+from runpod.cli.groups.config.functions import set_credentials, check_credentials
 
 @click.command('config', help="Configures the RunPod CLI with the user's API key.")
 @click.argument('api-key', required=False, default=None)

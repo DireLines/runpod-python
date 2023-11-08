@@ -4,8 +4,8 @@ RunPod | CLI | Exec | Commands
 
 import click
 
-from .functions import python_over_ssh
-from .helpers import get_session_pod
+from runpod.cli.groups.exec.functions import python_over_ssh
+from runpod.cli.groups.exec.helpers import get_session_pod
 
 @click.group('exec', help='Execute commands in a pods.')
 def exec_cli():

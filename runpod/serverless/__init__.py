@@ -12,11 +12,11 @@ import signal
 import argparse
 from typing import Dict, Any
 
-from . import worker
-from .modules import rp_fastapi
-from .modules.rp_logger import RunPodLogger
-from .modules.rp_progress import progress_update
-from ..version import __version__ as runpod_version
+from runpod.serverless import worker
+from runpod.serverless.modules import rp_fastapi
+from runpod.serverless.modules.rp_logger import RunPodLogger
+from runpod.serverless.modules.rp_progress import progress_update
+from runpod.version import __version__ as runpod_version
 
 
 log = RunPodLogger()

@@ -9,7 +9,7 @@ from watchdog.observers.polling import PollingObserver as Observer
 from watchdog.events import FileSystemEventHandler
 
 from runpod.cli import STOP_EVENT
-from .rp_runpodignore import get_ignore_list, should_ignore
+from runpod.cli.utils.rp_runpodignore import get_ignore_list, should_ignore
 
 class WatcherHandler(FileSystemEventHandler):
     """Watches a directory for changes and syncs them to a remote directory."""

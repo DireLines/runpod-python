@@ -9,11 +9,11 @@ from fastapi import FastAPI, APIRouter
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 
-from .rp_handler import is_generator
-from .rp_job import run_job, run_job_generator
-from .worker_state import Jobs
-from .rp_ping import Heartbeat
-from ...version import __version__ as runpod_version
+from runpod.serverless.modules.rp_handler import is_generator
+from runpod.serverless.modules.rp_job import run_job, run_job_generator
+from runpod.serverless.modules.worker_state import Jobs
+from runpod.serverless.modules.rp_ping import Heartbeat
+from runpod.version import __version__ as runpod_version
 
 
 RUNPOD_ENDPOINT_ID = os.environ.get("RUNPOD_ENDPOINT_ID", None)

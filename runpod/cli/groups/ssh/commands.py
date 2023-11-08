@@ -4,7 +4,7 @@ RunPod | CLI | SSH | Commands
 
 import click
 from prettytable import PrettyTable
-from .functions import get_user_pub_keys, generate_ssh_key_pair
+from runpod.cli.groups.ssh.functions import get_user_pub_keys, generate_ssh_key_pair
 
 @click.group('ssh', help='Manage and configure SSH keys for secure access to pods.')
 def ssh_cli():

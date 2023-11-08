@@ -12,8 +12,8 @@ from tomlkit import document, comment, table, nl
 from runpod import __version__, get_pod, create_template, create_endpoint
 from runpod.cli import BASE_DOCKER_IMAGE, GPU_TYPES, ENV_VARS
 from runpod.cli.utils.ssh_cmd import SSHConnection
-from .helpers import get_project_pod, copy_template_files, attempt_pod_launch, load_project_config
-from ...utils.rp_sync import sync_directory
+from runpod.cli.groups.project.helpers import get_project_pod, copy_template_files, attempt_pod_launch, load_project_config
+from runpod.cli.utils.rp_sync import sync_directory
 
 STARTER_TEMPLATES = os.path.join(os.path.dirname(__file__), 'starter_templates')
 

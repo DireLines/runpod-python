@@ -1,3 +1,3 @@
 ''' CLI functions for SSH. '''
 
-from . import functions
+from runpod.cli.groups.ssh import functions

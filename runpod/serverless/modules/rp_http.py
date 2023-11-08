@@ -8,7 +8,7 @@ import aiohttp
 from aiohttp_retry import RetryClient, ExponentialRetry
 
 from runpod.serverless.modules.rp_logger import RunPodLogger
-from .worker_state import Jobs, WORKER_ID
+from runpod.serverless.modules.worker_state import Jobs, WORKER_ID
 
 JOB_DONE_URL_TEMPLATE = str(os.environ.get('RUNPOD_WEBHOOK_POST_OUTPUT', 'JOB_DONE_URL'))
 JOB_DONE_URL = JOB_DONE_URL_TEMPLATE.replace('$RUNPOD_POD_ID', WORKER_ID)

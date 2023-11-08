@@ -2,7 +2,7 @@
 
 import threading
 
-from .groups import config, ssh
+from runpod.cli.groups import config, ssh
 
 STOP_EVENT = threading.Event()
 

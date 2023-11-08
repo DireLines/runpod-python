@@ -1,3 +1,3 @@
 """Asyncio endpoint for runpod."""
 
-from .asyncio_runner import Endpoint, Job
+from runpod.endpoint.asyncio.asyncio_runner import Endpoint, Job

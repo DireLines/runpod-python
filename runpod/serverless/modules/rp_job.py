@@ -12,9 +12,9 @@ import traceback
 from aiohttp import ClientSession
 
 from runpod.serverless.modules.rp_logger import RunPodLogger
-from .worker_state import WORKER_ID, Jobs
-from .rp_tips import check_return_size
-from ...version import __version__ as runpod_version
+from runpod.serverless.modules.worker_state import WORKER_ID, Jobs
+from runpod.serverless.modules.rp_tips import check_return_size
+from runpod.version import __version__ as runpod_version
 
 JOB_GET_URL = str(os.environ.get('RUNPOD_WEBHOOK_GET_JOB')).replace('$ID', WORKER_ID)
 

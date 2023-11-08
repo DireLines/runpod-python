@@ -9,7 +9,7 @@ import json
 from typing import Dict, Any
 
 from runpod.serverless.modules.rp_logger import RunPodLogger
-from .rp_job import run_job
+from runpod.serverless.modules.rp_job import run_job
 
 log = RunPodLogger()
 

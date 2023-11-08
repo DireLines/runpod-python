@@ -10,7 +10,7 @@ from typing import Dict, Any
 import aiohttp
 
 from runpod.serverless.modules.rp_logger import RunPodLogger
-from .rp_http import send_result
+from runpod.serverless.modules.rp_http import send_result
 
 log = RunPodLogger()
 

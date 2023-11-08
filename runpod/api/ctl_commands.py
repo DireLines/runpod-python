@@ -5,16 +5,16 @@ RunPod | API Wrapper | CTL Commands
 
 from typing import Optional
 
-from .queries import user as user_queries
-from .mutations import user as user_mutations
-from .queries import gpus
-from .queries import pods as pod_queries
-from .graphql import run_graphql_query
-from .mutations import pods as pod_mutations
-from .mutations import endpoints as endpoint_mutations
+from runpod.api.queries import user as user_queries
+from runpod.api.mutations import user as user_mutations
+from runpod.api.queries import gpus
+from runpod.api.queries import pods as pod_queries
+from runpod.api.graphql import run_graphql_query
+from runpod.api.mutations import pods as pod_mutations
+from runpod.api.mutations import endpoints as endpoint_mutations
 
 # Templates
-from .mutations import templates as template_mutations
+from runpod.api.mutations import templates as template_mutations
 
 def get_user() -> dict:
     '''

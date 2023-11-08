@@ -8,8 +8,8 @@ import click
 from InquirerPy import prompt as cli_select
 
 from runpod import get_user
-from .functions import create_new_project, start_project, create_project_endpoint
-from .helpers import validate_project_name
+from runpod.cli.groups.project.functions import create_new_project, start_project, create_project_endpoint
+from runpod.cli.groups.project.helpers import validate_project_name
 
 
 @click.group('project', help='Create, deploy, and manage RunPod projects.')
