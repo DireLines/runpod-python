@@ -7,7 +7,7 @@ A collection of functions to help with debugging.
 import time
 import datetime
 import platform
-import cpuinfo
+# import cpuinfo
 
 
 # ---------------------------------------------------------------------------- #
@@ -15,10 +15,10 @@ import cpuinfo
 # ---------------------------------------------------------------------------- #
 OS_INFO = f"{platform.system()} {platform.release()}"
 
-try:
-    PROCESSOR = cpuinfo.get_cpu_info()['brand_raw']
-except KeyError:
-    PROCESSOR = 'Unable to get processor info.'
+# try:
+#     PROCESSOR = cpuinfo.get_cpu_info()['brand_raw']
+# except KeyError:
+#     PROCESSOR = 'Unable to get processor info.'
 
 PYTHON_VERSION = platform.python_version()
 
@@ -188,7 +188,7 @@ def get_debugger_output():
 
     system_info = {
         'os': OS_INFO,
-        'processor': PROCESSOR,
+        # 'processor': PROCESSOR,
         'python_version': PYTHON_VERSION,
         'runpod': runpod.__version__,
     }
