@@ -1,5 +1,50 @@
 # Change Log
 
+## Release 1.4.0 (TBD)
+
+### Changed
+
+- [Breaking] concurrency is now handled by `concurrency_modifier` which is a user provided function that takes in the current concurrency and returns the new concurrency. This allows for more complex concurrency logic to be implemented by the user.
+
+---
+
+## Release 1.3.8 (12/1/23)
+
+### Added
+
+- Stream support for calling endpoints.
+
+---
+
+## Release 1.3.7 (11/29/23)
+
+### Fixed
+
+- Catch timeouts when checking for available jobs.
+
+### Changed
+
+- Updated and pinned aiohttp to 3.9.1
+
+---
+
+## Release 1.3.6 (11/23/23)
+
+## Fixed
+
+- Restrict version of `aiohttp` to 3.8.6 to avoid breaking changes in 3.9.0
+
+---
+
+## Release 1.3.5 (11/23/23)
+
+### Fixed
+
+- Robust `get_job` error handling
+- `project.toml` now includes required dependencies
+
+---
+
 ## Release 1.3.4 (11/14/23)
 
 ### Changed
