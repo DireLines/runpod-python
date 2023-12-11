@@ -261,7 +261,7 @@ def start_project():  # pylint: disable=too-many-locals, too-many-branches
             update_exclude_pattern
 
             # Start the API server in the background, and save the PID
-            python {handler_path} --rp_serve_api --rp_api_host="0.0.0.0" --rp_api_port=8080 --rp_api_concurrency=1 &
+            python -m scalene --html --no-browser --profile-all --outfile {remote_project_path}/profile.html --- {handler_path} --rp_serve_api --rp_api_host="0.0.0.0" --rp_api_port=8080 --rp_api_concurrency=1 &
             last_pid=$!
 
             echo -e "- Started API server with PID: $last_pid" && echo ""
@@ -287,7 +287,7 @@ def start_project():  # pylint: disable=too-many-locals, too-many-branches
                     update_exclude_pattern
                 fi
 
-                python {handler_path} --rp_serve_api --rp_api_host="0.0.0.0" --rp_api_port=8080 --rp_api_concurrency=1 &
+                python -m scalene --html --no-browser --profile-all --outfile {remote_project_path}/profile.html --- {handler_path} --rp_serve_api --rp_api_host="0.0.0.0" --rp_api_port=8080 --rp_api_concurrency=1 &
                 last_pid=$!
 
                 echo "Restarted API server with PID: $last_pid"
